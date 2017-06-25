@@ -55,11 +55,11 @@ regionSix.fillStyle = "#FFC300";
 regionSix.fillRect(81,191,58,9);
 
 var regionSeven = c.getContext("2d");
-regionSeven.fillStyle = "#000000";
+regionSeven.fillStyle = "#FFFFFF";
 regionSeven.fillRect(141,191,38,9);
 
 var regionEight = c.getContext("2d");
-regionEight.fillStyle = "#FFFFFF";
+regionEight.fillStyle = "#000000";
 regionEight.fillRect(181,141,19,59);
 
 var sLast = c.getContext("2d");
