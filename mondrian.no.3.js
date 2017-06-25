@@ -43,11 +43,11 @@ regionThree.fillStyle = "#FFFFFF";
 regionThree.fillRect(0,101,79,99);
 
 var regionFour = c.getContext("2d");
-regionFour.fillStyle = "#FFFFFF";
+regionFour.fillStyle = "#01579B";
 regionFour.fillRect(81,101,98,88);
 
 var regionFive = c.getContext("2d");
-regionFive.fillStyle = "#01579B";
+regionFive.fillStyle = "#FFFFFF";
 regionFive.fillRect(181,101,19,38);
 
 var regionSix = c.getContext("2d");
