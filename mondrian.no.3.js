@@ -31,11 +31,11 @@ horizontalThree.lineTo(179,190);
 horizontalThree.stroke();
 
 var regionOne = c.getContext("2d");
-regionOne.fillStyle = "#FF0000";
+regionOne.fillStyle = "#FFFFFF";
 regionOne.fillRect(0,0,79,99);
 
 var regionTwo = c.getContext("2d");
-regionTwo.fillStyle = "#FFFFFF";
+regionTwo.fillStyle = "#FF0000";
 regionTwo.fillRect(81,0,139,99);
 
 var regionThree = c.getContext("2d");
