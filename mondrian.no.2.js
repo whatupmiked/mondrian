@@ -42,7 +42,7 @@ regionFive.fillStyle = "#ffffff";
 regionFive.fillRect(140,120,60,80);
 
 var regionSix = c2.getContext("2d")
-regionSix.fillStyle = "#ffff00"
+regionSix.fillStyle = "#ffc300"
 regionSix.fillRect(0,160,140,60)
 
 var sLast = c2.getContext("2d");
