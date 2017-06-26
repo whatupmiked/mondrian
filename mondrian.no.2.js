@@ -17,8 +17,8 @@ horizontalTwo.lineTo(200,120);
 horizontalTwo.stroke();
 
 var horizontalThree = c2.getContext("2d");
-horizontalThree.moveTo(0,198);
-horizontalThree.lineTo(140,198);
+horizontalThree.moveTo(0,158);
+horizontalThree.lineTo(140,158);
 horizontalThree.stroke();
 
 var regionOne = c2.getContext("2d");
@@ -31,15 +31,19 @@ regionOne.fillRect(140,0,60,60);
 
 var regionThree = c2.getContext("2d");
 regionThree.fillStyle = "#ffffff";
-regionThree.fillRect(0,60,140,200);
+regionThree.fillRect(0,60,140,98);
 
 var regionFour = c2.getContext("2d");
-regionThree.fillStyle = "#01579B";
-regionThree.fillRect(140,60,60,60);
+regionFour.fillStyle = "#01579B";
+regionFour.fillRect(140,60,60,60);
 
 var regionFive = c2.getContext("2d");
-regionThree.fillStyle = "#ffffff";
-regionThree.fillRect(140,120,60,80);
+regionFive.fillStyle = "#ffffff";
+regionFive.fillRect(140,120,60,80);
+
+var regionSix = c2.getContext("2d")
+regionSix.fillStyle = "#ffff00"
+regionSix.fillRect(0,160,140,60)
 
 var sLast = c2.getContext("2d");
 sLast.moveTo(0,0);
