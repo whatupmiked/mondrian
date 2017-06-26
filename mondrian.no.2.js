@@ -34,7 +34,7 @@ var c = document.getElementById("no2");
         regionThree.fillStyle = "#ffffff";
         regionThree.fillRect(0,60,140,200);
 
-				var regionFour = c.getContext("2d");
+	var regionFour = c.getContext("2d");
         regionThree.fillStyle = "#01579B";
         regionThree.fillRect(140,60,60,60);
         
