@@ -43,13 +43,10 @@ regionThree.fillStyle = "#FFFFFF";
 regionThree.fillRect(0,60,140,98);
 
 regionFour.fillStyle = "#FFFFFF";
-regionFour.fillRect(140,60,60,60);
+regionFour.fillRect(140,60,60,200);
 
 regionFive.fillStyle = "#FFFFFF";
 regionFive.fillRect(140,120,60,80);
-
-regionSix.fillStyle = "#ffc300"
-regionSix.fillRect(0,160,140,60)
 
 // Extra blank lines to deal with layering issues
 var sLast = c2.getContext("2d");
