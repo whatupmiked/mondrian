@@ -40,10 +40,10 @@ regionOne.fillStyle = "#FFFFFF";
 regionOne.fillRect(140,0,60,60);
 
 regionThree.fillStyle = "#FFFFFF";
-regionThree.fillRect(0,60,140,98);
+regionThree.fillRect(0,60,140,200);
 
 regionFour.fillStyle = "#FFFFFF";
-regionFour.fillRect(140,60,60,200);
+regionFour.fillRect(140,60,60,60);
 
 regionFive.fillStyle = "#FFFFFF";
 regionFive.fillRect(140,120,60,80);
