@@ -20,7 +20,7 @@ function loadGitLog(rangeVal) {
     // Dynamically load the canvas script values based on the location in the commit log
     var gitLog = getGitLog();
     var uName = gitLog[rangeVal].commit.author.name;
-    var msg = gitLog[rangeVal].message;
+    var msg = gitLog[rangeVal].commit.message;
 
     //Clean up and script tags from previous commits
     var oldScript = document.getElementsByClassName("mondrianScript");
@@ -29,9 +29,30 @@ function loadGitLog(rangeVal) {
             oldScript[0].parentNode.removeChild(oldScript[0]);
         }
     }
+
+    var oldCommitInfo = document.getElementsByClassName("commitinfo");
+    if (oldCommitInfo != null) {
+        while(oldCommitInfo.length > 0) {
+            oldCommitInfo[0].parentNode.removeChild(oldCommitInfo[0]);
+        }
+    }
+
+    // Inject git commit info into body.
+    var gitInfoDiv = document.getElementById("gitinfo");
+    var commitNameP = document.createElement("p");
+    var commitMsgP = document.createElement("p");
+    commitNameP.setAttribute('class', 'commitinfo');
+    commitMsgP.setAttribute('class', 'commitinfo');
+    var commitName = document.createTextNode("Committer: " + uName);
+    var commitMsg = document.createTextNode("Commit message: " + msg);
+    commitNameP.appendChild(commitName);
+    commitMsgP.appendChild(commitMsg);
+    gitInfoDiv.appendChild(commitNameP);
+    gitInfoDiv.appendChild(commitMsgP);
+
     // get the gitTree contents
     var gitTree = getGitTree(gitLog[rangeVal].commit.tree.url);
-    // for each mondrian.*.js file in gitLog, add a script
+    // for each mondrian.*.js file in gitLog, run the script
     for ( i = 0; i < gitTree.length; i++ ) {
         if( gitTree[i].path.indexOf("mondrian") != -1 ) {
             var jsElement = document.createElement("script");
@@ -64,6 +85,8 @@ function createCanvas() {
     // Create Canvas' for script injection based on the mondrian.*.js files in latest repository
     var theTree = getGitTree(getGitLog()[0].commit.tree.url)
     for ( i = theTree.length - 1; i >= 0; i-- ) {
+        // If i mod 3 != 0 and i + 1 != theTree.length or 0 add row break 
+        // Detect mondrian.*.js files and add a canvas into DOM
         if ( theTree[i].path.indexOf("mondrian") != -1 ) {
             var canvasID = theTree[i].path.replace("mondrian.","");
             canvasID = canvasID.replace(".js", "");
