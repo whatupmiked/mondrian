@@ -36,16 +36,16 @@ horizontalThree.stroke();
 regionOne.fillStyle = "#FF0000";
 regionOne.fillRect(0,0,140,60);
 
-regionOne.fillStyle = "#FFFFFF";
-regionOne.fillRect(140,0,60,60);
+regionTwo.fillStyle = "#FFFFFF";
+regionTwo.fillRect(140,0,60,60);
 
 regionThree.fillStyle = "#FFFFFF";
 regionThree.fillRect(0,60,140,200);
 
-regionFour.fillStyle = "#FFFFFF";
+regionFour.fillStyle = "#008000";
 regionFour.fillRect(140,60,60,60);
 
-regionFive.fillStyle = "#FFFFFF";
+regionFive.fillStyle = "#800080";
 regionFive.fillRect(140,120,60,80);
 
 // Extra blank lines to deal with layering issues
