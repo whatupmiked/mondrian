@@ -1,5 +1,5 @@
-# mondrian.composition.3
-An HTML5/CSS3/Javascript rendering of Mondrian's Composition No. 3 and No.2 accessible online from [here](http://www.whatupmiked.com/mondrian/index.html)
+# Mondrian on Git
+An HTML5/CSS3/Javascript rendering of Mondrian Compositions accessible online from [here](http://www.whatupmiked.com/mondrian/index.html)
 
 ## Adding to the repository
  1. Modify the values of an existing mondrian.<name>.js file and push your changes.
@@ -19,11 +19,12 @@ The best way to test your canvas is using https://jsfiddle.net/.
 
 ## Ignoring the gitlog
 To display the web-page without the repository generated gitlog change:
-```
+```html
 <script src="gitlog.js"> type="text/javascript">
 </script>
 ```
 To:
+```html
 <canvas id="yourID" height="200" width="200"></canvas>
 <script src="mondrian.yourID.js" type="text/javascript"></script>
 ```
