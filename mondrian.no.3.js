@@ -1,6 +1,8 @@
+//The name of the canvas element for this picture
 var c = document.getElementById("no3");
 
 var verticalOne = c.getContext("2d");
+verticalOne.beginPath(); // Call this the first time we draw something to clear previous canvas elements
 verticalOne.moveTo(80,0);
 verticalOne.lineTo(80,200);
 <!--verticalOne.lineWidth=1; to increase the width of the stroke-->
@@ -36,15 +38,15 @@ regionOne.fillStyle = "#000000";
 regionOne.fillRect(0,0,79,99);
 
 var regionTwo = c.getContext("2d");
-regionTwo.fillStyle = "#ffffff";
+regionTwo.fillStyle = "#FFFFFF";
 regionTwo.fillRect(81,0,139,99);
 
 var regionThree = c.getContext("2d");
-regionThree.fillStyle = "#ffffff";
+regionThree.fillStyle = "#FFFFFF";
 regionThree.fillRect(0,101,79,99);
 
 var regionFour = c.getContext("2d");
-regionFour.fillStyle = "#FFFFFF";
+regionFour.fillStyle = "#0000FF";
 regionFour.fillRect(81,101,98,88);
 
 var regionFive = c.getContext("2d");
