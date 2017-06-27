@@ -29,23 +29,23 @@ horizontalTwo.lineTo(200,120);
 horizontalTwo.stroke();
 
 // Create the third horizontal line from top to bottom
-horizontalThree.moveTo(0,158);
-horizontalThree.lineTo(140,158);
+horizontalThree.moveTo(0,199);
+horizontalThree.lineTo(140,199);
 horizontalThree.stroke();
 
 regionOne.fillStyle = "#FF0000";
 regionOne.fillRect(0,0,140,60);
 
-regionOne.fillStyle = "#ffffff";
+regionOne.fillStyle = "#FFFFFF";
 regionOne.fillRect(140,0,60,60);
 
-regionThree.fillStyle = "#ffffff";
+regionThree.fillStyle = "#FFFFFF";
 regionThree.fillRect(0,60,140,98);
 
-regionFour.fillStyle = "#01579B";
+regionFour.fillStyle = "#FFFFFF";
 regionFour.fillRect(140,60,60,60);
 
-regionFive.fillStyle = "#ffffff";
+regionFive.fillStyle = "#FFFFFF";
 regionFive.fillRect(140,120,60,80);
 
 regionSix.fillStyle = "#ffc300"
