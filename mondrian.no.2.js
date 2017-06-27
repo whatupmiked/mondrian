@@ -19,19 +19,16 @@ verticalOne.lineWidth=3; <!--to increase the width of the stroke-->
 verticalOne.stroke();
 
 // Create the first horizontal line from top to bottom
-horizontalOne.beginPath();
 horizontalOne.moveTo(0,60);
 horizontalOne.lineTo(200,60);
 horizontalOne.stroke();
 
 // Create the second horizontal line from top to bottom
-horizontalTwo.beginPath();
 horizontalTwo.moveTo(140,120);
 horizontalTwo.lineTo(200,120);
 horizontalTwo.stroke();
 
 // Create the third horizontal line from top to bottom
-horizontalThree.beginPath();
 horizontalThree.moveTo(0,158);
 horizontalThree.lineTo(140,158);
 horizontalThree.stroke();
