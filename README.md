@@ -6,7 +6,10 @@ An HTML5/CSS3/Javascript rendering of Mondrian Compositions accessible online fr
  2. Add a new file named 'mondrian.<name>.js' to the repository.
 
 ## File Relationship
-<TODO>
+ - **index.html:** This file is is the main HTML page that contains references to the location of the javascript to execute in the `<script>` tag, the main template to use for the site, and the CSS file to use for styling the web-page elements.
+ - **site.xml:** This is a CSS file used to change the look and feel of the web-page. Right now it is commented out in the index.html file using the !.
+ - **gitlog.js:** This is the script that dynamically generates the slide bar, mondrian canvas displays, and the 3 column table based on the contents of the git respository hosted on github.
+ - **mondrian.NAME.js:** The javascript file that generates the lines and regions to display on the respective mondrian canvas.
 
 ## Generating a new canvas or altering an existing canvas
 The best way to test your canvas is using https://jsfiddle.net/.
@@ -92,6 +95,7 @@ The best way to test your canvas is using https://jsfiddle.net/.
  <canvas id="yourID" height="200" width="200"></canvas>
  ```
  3. Change the value of "yourID" to the value between the double quotes in 'var c = document.getElementById("no3");' line of the javascript.
+ 4. Once you are happy with the way the image looks, create a new mondrian.NAME.js file and place the javascript from your jsFiddle window into this file in your local repository. Commit the new file to the repository and it should automatically render on the webpage.
 
 ## Ignoring the gitlog
 To display the web-page without the repository generated gitlog change:
@@ -106,4 +110,9 @@ To:
 ```
 
 ## Generating the page from your repository
-<TODO>
+1. Fork the repository.
+2. Change the value of 'repository' on line 1 in gitlog.js
+```javascript
+var repository = "yourusername\yourrepository"
+```
+3. In a browser like Chrome point your browser to the file-path on your local system. (i.e. file:///SYSTEMPATH/index.html)

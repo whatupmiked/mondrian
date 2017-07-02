@@ -1,12 +1,15 @@
-window.onload = createInputTag();
-window.onload = createCanvas();
-window.onload = loadGitLog("0");
+var repository = "whatupmiked/mondrian";
 
-function createInputTag() {
+window.onload = createInputTag(repository);
+window.onload = createCanvas(repository);
+window.onload = loadGitLog("0",repository);
+
+
+function createInputTag(repo) {
     // Create the commit log range slider
     var anchor = document.createElement("div")
     var input = document.createElement("input");
-    var gLog = getGitLog();
+    var gLog = getGitLog(repo);
     input.type = "range";
     input.min = "0";
     input.max = gLog.length - 1;
@@ -16,9 +19,9 @@ function createInputTag() {
     document.body.appendChild(anchor);
 }
 
-function loadGitLog(rangeVal) {
+function loadGitLog(rangeVal, repo) {
     // Dynamically load the canvas script values based on the location in the commit log
-    var gitLog = getGitLog();
+    var gitLog = getGitLog(repo);
     var uName = gitLog[rangeVal].commit.author.name;
     var msg = gitLog[rangeVal].commit.message;
 
@@ -57,17 +60,17 @@ function loadGitLog(rangeVal) {
         if( gitTree[i].path.indexOf("mondrian") != -1 ) {
             var jsElement = document.createElement("script");
             jsElement.type = "application/javascript"
-            jsElement.src = "http://rawgit.com/whatupmiked/mondrian/" + gitLog[rangeVal].sha + "/" + gitTree[i].path;
+            jsElement.src = "http://rawgit.com/" + repo + "/" + gitLog[rangeVal].sha + "/" + gitTree[i].path;
             jsElement.setAttribute('class', 'mondrianScript');
             document.body.appendChild(jsElement);
         }
     }
 }
 
-function getGitLog() {
+function getGitLog(repo) {
     /// Retrieve the commit history of the github repo
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET","https://api.github.com/repos/whatupmiked/mondrian/commits", false);
+    xhttp.open("GET","https://api.github.com/repos/" + repo + "/commits", false);
     xhttp.send();
     var logResponse = JSON.parse(xhttp.responseText);
     return logResponse;
@@ -82,9 +85,9 @@ function getGitTree(url) {
     return treeResponse.tree;
 }
 
-function createCanvas() {
+function createCanvas(repo) {
     // Create Canvas' for script injection based on the mondrian.*.js files in latest repository
-    var theTree = getGitTree(getGitLog()[0].commit.tree.url);
+    var theTree = getGitTree(getGitLog(repo)[0].commit.tree.url);
     var len = theTree.length
     var mondrianTree = [];
     // Create an array of only the mondrian.js files to facilitate creation of table
