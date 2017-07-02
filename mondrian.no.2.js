@@ -42,10 +42,10 @@ regionTwo.fillRect(140,0,60,60);
 regionThree.fillStyle = "#FFFFFF";
 regionThree.fillRect(0,60,140,200);
 
-regionFour.fillStyle = "#008000";
+regionFour.fillStyle = "#01579B";
 regionFour.fillRect(140,60,60,60);
 
-regionFive.fillStyle = "#800080";
+regionFive.fillStyle = "#FFFFFF";
 regionFive.fillRect(140,120,60,80);
 
 // Extra blank lines to deal with layering issues
