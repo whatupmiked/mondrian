@@ -15,6 +15,8 @@ On page load an api request is made to github for the commit history and reposit
 
 ## Generating a new canvas or altering an existing canvas
 The best way to test your canvas is using https://jsfiddle.net/.
+![jsfiddle example](https://user-images.githubusercontent.com/15186057/27844852-74c8b3d2-611f-11e7-993d-a1ac30187703.png)
+
  1. Place the contents of your 'mondrian.[name].js' file into the 'javascript' portion of jsfiddle window.
  ```javascript
  var c = document.getElementById("yourID");
