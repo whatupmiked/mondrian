@@ -1,7 +1,7 @@
 # Mondrian on Git
 An HTML5/CSS3/Javascript rendering of Mondrian Compositions accessible online from [here](http://www.whatupmiked.com/mondrian/index.html)
 
-On page load an api request is made to github for the defined repository and stored. Each time the slider is moved the javascript file for that canvas and that point in the commit history is loaded from rawgithub.com.
+On page load an api request is made to github for the commit history and repository file contents. Each time the slider is moved the javascript file for that canvas and that point in the commit history is loaded from rawgithub.com.
 
 ## Adding to the repository
  1. Modify the values of an existing mondrian.<name>.js file and push your changes.
