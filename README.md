@@ -4,8 +4,8 @@ An HTML5/CSS3/Javascript rendering of Mondrian Compositions accessible online fr
 On page load an api request is made to github for the commit history and repository file contents. Each time the slider is moved the javascript file for that canvas and that point in the commit history is loaded from rawgithub.com.
 
 ## Adding to the repository
- 1. Modify the values of an existing mondrian.<name>.js file and push your changes.
- 2. Add a new file named 'mondrian.<name>.js' to the repository.
+ 1. Modify the values of an existing `mondrian.NAME.js` file and push your changes.
+ 2. Add a new file named `mondrian.NAME.js` to the repository.
 
 ## File Relationship
  - **index.html:** This file is is the main HTML page that contains references to the location of the javascript to execute in the `<script>` tag, the main template to use for the site, and the CSS file to use for styling the web-page elements.
@@ -17,7 +17,7 @@ On page load an api request is made to github for the commit history and reposit
 The best way to test your canvas is using https://jsfiddle.net/.
 ![jsfiddle example](https://user-images.githubusercontent.com/15186057/27844852-74c8b3d2-611f-11e7-993d-a1ac30187703.png)
 
- 1. Place the contents of your 'mondrian.[name].js' file into the 'javascript' portion of jsfiddle window.
+ 1. Place the contents of your `mondrian.NAME.js` file into the 'javascript' portion of jsfiddle window.
  ```javascript
  var c = document.getElementById("yourID");
 
@@ -98,8 +98,8 @@ The best way to test your canvas is using https://jsfiddle.net/.
  ```html
  <canvas id="yourID" height="200" width="200"></canvas>
  ```
- 3. Change the value of "yourID" to the value between the double quotes in 'var c = document.getElementById("no3");' line of the javascript.
- 4. Once you are happy with the way the image looks, create a new mondrian.NAME.js file and place the javascript from your jsFiddle window into this file in your local repository. Commit the new file to the repository and it should automatically render on the webpage.
+ 3. Change the value of `yourID` to the value between the double quotes in `var c = document.getElementById("no3");` line of the javascript.
+ 4. Once you are happy with the way the image looks, create a new `mondrian.NAME.js` file and place the javascript from your jsFiddle window into this file in your local repository. Commit the new file to the repository and it should automatically render on the webpage.
 
 ## Ignoring the gitlog
 To display the web-page without the repository generated gitlog change:
@@ -115,8 +115,8 @@ To:
 
 ## Generating the page from your repository
 1. Fork the repository.
-2. Change the value of 'repository' on line 1 in gitlog.js
+2. Change the value of `repository` on line 1 in gitlog.js
 ```javascript
 var repository = "yourusername\yourrepository"
 ```
-3. In a browser like Chrome point your browser to the file-path on your local system. (i.e. file:///SYSTEMPATH/index.html)
+3. In a browser like Chrome point your browser to the file-path on your local system. (i.e. `file:///SYSTEMPATH/index.html`)
