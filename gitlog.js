@@ -1,27 +1,26 @@
 var repository = "whatupmiked/mondrian";
+var commitHistory = getGitLog(repository);
 
-window.onload = createInputTag(repository);
-window.onload = createCanvas(repository);
-window.onload = loadGitLog("0",repository);
+window.onload = createInputTag(repository, commitHistory);
+window.onload = createCanvas(commitHistory);
+window.onload = loadGitLog("0", repository, commitHistory);
 
 
-function createInputTag(repo) {
+function createInputTag(gLog) {
     // Create the commit log range slider
     var anchor = document.createElement("div")
     var input = document.createElement("input");
-    var gLog = getGitLog(repo);
     input.type = "range";
     input.min = "0";
     input.max = gLog.length - 1;
     input.setAttribute("value", "0");
-    input.setAttribute("oninput", "loadGitLog(value)");
+    input.setAttribute("oninput", "loadGitLog(value, repository, commitHistory)");
     anchor.appendChild(input);
     document.body.appendChild(anchor);
 }
 
-function loadGitLog(rangeVal, repo) {
+function loadGitLog(rangeVal, repo, gitLog) {
     // Dynamically load the canvas script values based on the location in the commit log
-    var gitLog = getGitLog(repo);
     var uName = gitLog[rangeVal].commit.author.name;
     var msg = gitLog[rangeVal].commit.message;
 
@@ -85,9 +84,10 @@ function getGitTree(url) {
     return treeResponse.tree;
 }
 
-function createCanvas(repo) {
+function createCanvas(gLog) {
     // Create Canvas' for script injection based on the mondrian.*.js files in latest repository
-    var theTree = getGitTree(getGitLog(repo)[0].commit.tree.url);
+    // var theTree = getGitTree(getGitLog(repo)[0].commit.tree.url);
+    var theTree = getGitTree(gLog[0].commit.tree.url);
     var len = theTree.length
     var mondrianTree = [];
     // Create an array of only the mondrian.js files to facilitate creation of table
