@@ -1,6 +1,6 @@
 # Mondrian on Git
 An HTML5/CSS3/Javascript rendering of Mondrian Compositions accessible online from [here](http://www.whatupmiked.com/mondrian/index.html).
-![Example Canvas](https://user-images.githubusercontent.com/15186057/28240127-4fe1ef96-6973-11e7-8978-e854a2c1e3b7.png)
+![Example Canvas](https://user-images.githubusercontent.com/15186057/28240127-4fe1ef96-6973-11e7-8978-e854a2c1e3b7.png =200x200)
 
 On page load an api request is made to github for the commit history and repository file contents. Each time the slider is moved the javascript file for that canvas and that point in the commit history is loaded from rawgithub.com.
 
