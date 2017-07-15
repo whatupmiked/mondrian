@@ -33,7 +33,7 @@ horizontalThree.moveTo(0,199);
 horizontalThree.lineTo(140,199);
 horizontalThree.stroke();
 
-regionOne.fillStyle = "#9966FF";
+regionOne.fillStyle = "#66FF99";
 regionOne.fillRect(0,0,140,60);
 
 regionTwo.fillStyle = "#CCCCFF";
@@ -42,7 +42,7 @@ regionTwo.fillRect(140,0,60,60);
 regionThree.fillStyle = "#CCCCFF";
 regionThree.fillRect(0,60,140,200);
 
-regionFour.fillStyle = "#01579B";
+regionFour.fillStyle = "#989898";
 regionFour.fillRect(140,60,60,60);
 
 regionFive.fillStyle = "#CCCCFF";

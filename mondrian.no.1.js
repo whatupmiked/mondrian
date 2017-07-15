@@ -84,7 +84,7 @@ var c = document.getElementById("no1");
         regionOne.fillRect(95,120,70,65);
         
         var regionThirteen = c.getContext("2d");
-        regionOne.fillStyle = "#9966FF";
+        regionOne.fillStyle = "#66FF99";
         regionOne.fillRect(95,185,70,65);
         
         var regionFourteen = c.getContext("2d");

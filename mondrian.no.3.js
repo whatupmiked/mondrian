@@ -34,7 +34,7 @@ horizontalThree.lineTo(179,190);
 horizontalThree.stroke();
 
 var regionOne = c.getContext("2d");
-regionOne.fillStyle = "#9966FF";
+regionOne.fillStyle = "#66FF99";
 regionOne.fillRect(0,0,79,99);
 
 var regionTwo = c.getContext("2d");
@@ -50,7 +50,7 @@ regionFour.fillStyle = "#CCCCFF";
 regionFour.fillRect(81,101,98,88);
 
 var regionFive = c.getContext("2d");
-regionFive.fillStyle = "#01579B";
+regionFive.fillStyle = "#989898";
 regionFive.fillRect(181,101,19,38);
 
 var regionSix = c.getContext("2d");
