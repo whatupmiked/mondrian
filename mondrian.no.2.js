@@ -33,19 +33,19 @@ horizontalThree.moveTo(0,199);
 horizontalThree.lineTo(140,199);
 horizontalThree.stroke();
 
-regionOne.fillStyle = "#FF0000";
+regionOne.fillStyle = "#9966FF";
 regionOne.fillRect(0,0,140,60);
 
-regionTwo.fillStyle = "#FFFFFF";
+regionTwo.fillStyle = "#CCCCFF";
 regionTwo.fillRect(140,0,60,60);
 
-regionThree.fillStyle = "#FFFFFF";
+regionThree.fillStyle = "#CCCCFF";
 regionThree.fillRect(0,60,140,200);
 
 regionFour.fillStyle = "#01579B";
 regionFour.fillRect(140,60,60,60);
 
-regionFive.fillStyle = "#FFFFFF";
+regionFive.fillStyle = "#CCCCFF";
 regionFive.fillRect(140,120,60,80);
 
 // Extra blank lines to deal with layering issues

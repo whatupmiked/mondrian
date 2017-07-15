@@ -40,11 +40,11 @@ var c = document.getElementById("no1");
         regionOne.fillRect(0,0,90,90);
         
         var regionTwo = c.getContext("2d");
-        regionOne.fillStyle = "#FFFFFF";
+        regionOne.fillStyle = "#CCCCFF";
         regionOne.fillRect(90,0,5,90);
         
         var regionThree = c.getContext("2d");
-        regionOne.fillStyle = "#FFFFFF";
+        regionOne.fillStyle = "#CCCCFF";
         regionOne.fillRect(95,0,105,90);
         
         var regionFour = c.getContext("2d");
@@ -60,11 +60,11 @@ var c = document.getElementById("no1");
         regionOne.fillRect(95,90,105,5);
         
         var regionSeven = c.getContext("2d");
-        regionOne.fillStyle = "#FFFFFF";
+        regionOne.fillStyle = "#CCCCFF";
         regionOne.fillRect(0,95,90,25);
         
         var regionEnight = c.getContext("2d");
-        regionOne.fillStyle = "#FFFFFF";
+        regionOne.fillStyle = "#CCCCFF";
         regionOne.fillRect(90,95,5,25);
         
         var regionNine = c.getContext("2d");
@@ -72,7 +72,7 @@ var c = document.getElementById("no1");
         regionOne.fillRect(95,95,105,25);
         
         var regionTen = c.getContext("2d");
-        regionOne.fillStyle = "#FFFFFF";
+        regionOne.fillStyle = "#CCCCFF";
         regionOne.fillRect(0,120,90,80);
        
         var regionEleven = c.getContext("2d");
@@ -84,7 +84,7 @@ var c = document.getElementById("no1");
         regionOne.fillRect(95,120,70,65);
         
         var regionThirteen = c.getContext("2d");
-        regionOne.fillStyle = "#FF0000";
+        regionOne.fillStyle = "#9966FF";
         regionOne.fillRect(95,185,70,65);
         
         var regionFourteen = c.getContext("2d");
