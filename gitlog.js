@@ -67,15 +67,45 @@ function loadGitLog(rangeVal, repo, gitLog) {
 }
 
 function getGitLog(repo) {
-    /// Retrieve the commit history of the github repo
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET","https://api.github.com/repos/" + repo + "/commits?per_page=100", false);
-    //xhttp.open("GET","https://api.github.com/repos/" + repo + "/commits?callback=header", false);
-    xhttp.send();
-    var commitLog = JSON.parse(xhttp.responseText);
-    //var commitLog = JSON.parse(xhttp.responseText.replace(/\/\*\*\/header\(|\)$/g, ''));
-    // while next exists, make call and append data to logResponse
+    url = "https://api.github.com/repos/" + repo + "/commits?per_page=100&callback=foo";
+    var commitAPI = requestGitCommitAPI(url);
+    var commitLog = commitAPI.data;
+    // Check for multiple pages
+    if ("Link" in commitAPI.meta) {
+        var lastURL = "";
+        var nextURL = "";
+        var thisURL = url;
+        while (thisURL != lastURL) {
+            // Get the LINK headers
+            for(i = 0; i < commitAPI.meta.Link.length; i++ ) {
+                if (commitAPI.meta.Link[i][1].rel == "last") {
+                    lastURL = commitAPI.meta.Link[i][0];
+                } else if (commitAPI.meta.Link[i][1].rel == "next") {
+                    nextURL = commitAPI.meta.Link[i][0];
+                }
+            }
+            // Make a new request, update URLs, append data to array
+            commitAPI = requestGitCommitAPI(nextURL);
+            Array.prototype.push.apply(commitLog,commitAPI.data);
+            thisURL = nextURL;
+        }
+    }
+
     return commitLog;
+}
+
+function requestGitCommitAPI(url) {
+    // Assumes callback
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", url, false);
+    xhttp.send();
+    fullResponse = xhttp.responseText;
+    // Strip callback characters
+    jsonResponse = fullResponse.substring(8, fullResponse.length-2);
+    // Parse the string into a javascript array
+    var APIResponse = JSON.parse(jsonResponse);
+
+    return APIResponse;
 }
 
 function getGitTree(url) {
