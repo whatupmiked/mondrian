@@ -59,7 +59,7 @@ function loadGitLog(rangeVal, repo, gitLog) {
         if( gitTree[i].path.indexOf("mondrian") != -1 ) {
             var jsElement = document.createElement("script");
             jsElement.type = "application/javascript"
-            jsElement.src = "http://rawgit.com/" + repo + "/" + gitLog[rangeVal].sha + "/" + gitTree[i].path;
+            jsElement.src = "https://rawgit.com/" + repo + "/" + gitLog[rangeVal].sha + "/" + gitTree[i].path;
             jsElement.setAttribute('class', 'mondrianScript');
             document.body.appendChild(jsElement);
         }
